@@ -1,15 +1,64 @@
 package by.kmekhovich.quizer;
 
+import java.util.Map;
+
 public class quizer {
 
-    enum Result {OK, WRONG, INCORRECT_INPUT};
+    public enum Result {OK, WRONG, INCORRECT_INPUT};
 
-    interface Task {
+    public interface Task {
         public String getText();
         public Result validate(String answer);
 
     }
-    public static void main(String[] args) {
 
+    public interface TaskGenerator {
+        public Task generate();
     }
+
+    class Quiz {
+
+        Quiz(TaskGenerator generator, int taskCount) {
+
+        }
+
+        Task nextTask() {
+
+        }
+
+        Result provideAnswer(String answer) {
+
+        }
+
+        boolean isFinished() {
+
+        }
+
+        int getCorrectAnswerNumber() {
+
+        }
+
+        int getWrongAnswerNumber() {
+
+        }
+
+        int getIncorrectInputNumber() {
+
+        }
+
+        double getMark() {
+
+        }
+
+        static Map<String, Quiz> getQuizMap() {
+
+        }
+    }
+
+    public static void main(String[] args) {
+//
+//        Quiz quiz = new Quiz(, 5);
+//        Map<String, Quiz> quizMap =
+    }
+
 }
